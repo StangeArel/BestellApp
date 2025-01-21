@@ -9,6 +9,10 @@ html, body {
     padding: 0;
 }
 
+h3 {
+    font-size: 2rem;
+}
+
 .contentContainer {
     min-height: 100vh;
     display: flex;
@@ -38,13 +42,13 @@ html, body {
     width: 10rem;
     border-radius: 100%;
     background-color: var(--bg_whitesmoke);
-    margin-top: 7rem;
+    margin-top: 10rem;
     object-fit: cover;
 }
 
 .containerRestaurantImg {
     background-image: url("./assets/img/restaurant.jpg");
-    height: 12rem;
+    height: 15rem;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -63,7 +67,7 @@ html, body {
 }
 
 .restoranteName h1{
-    font-size: 32px;
+    font-size: 35px;
 }
 
 .restoranteName p {
@@ -80,4 +84,22 @@ font-weight: bold;
 color: var(--bg_grey);
 text-decoration: none;
 margin-left: 10px;
+}
+
+.arrow {
+    padding-bottom: 2rem;
+}
+
+.dishImg {
+    background-image: url("./assets/img/dish.jpg");
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.mainCourse{
+    margin: 0 2rem;
 }
