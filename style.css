@@ -154,3 +154,24 @@ h3 {
     background: var(--bg_darkorange);
     cursor: pointer;
 }
+
+.content-wrapper {
+    width: 100%;    /*bei Kevin: keine Breite + flex-grow: 1; */
+    display: flex;
+    gap: 2px;
+    flex-direction: row;
+}
+
+.basketWrapper {
+                                  /* bei Kevin width: 300px + flex-grow: 1; */
+    border: 2px solid var(--bg_orang);
+    padding: 16px;
+}
+
+.basket {
+    width: 320px; /* bei Kevin 100% */
+    height: 400px;
+    background-color: rgb(5, 91, 94);
+    position: sticky;  /* geklebte Position */
+    top: 0;
+}
