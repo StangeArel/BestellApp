@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.contentContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+flex: 1;
+}
+
+.footer,
+.header {
+    background-color: rgb(255, 139, 0);
+    height: 6rem;
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+    height: 80%;
+    margin: 0;
+}
+
+.noodlesImg {
+    height: 10rem;
+    border-radius: 100%;
+    background-color: rgb(13, 117, 209);
+    margin-top: 7rem;
+}
+
+.containerRestaurantImg {
+    background-image: url("./assets/img/restaurant.jpg");
+    height: 12rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
