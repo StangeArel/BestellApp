@@ -1,3 +1,9 @@
+:root {
+    --bg_orang: rgb(255, 139, 0);
+    --bg_whitesmoke: rgb(255, 255, 255);
+    --bg_grey: rgb(132, 135, 135);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -10,12 +16,12 @@ html, body {
 }
 
 .main {
-flex: 1;
+    flex: 1;
 }
 
 .footer,
 .header {
-    background-color: rgb(255, 139, 0);
+    background-color: var(--bg_orang);
     height: 6rem;
     align-items: center;
     display: flex;
@@ -24,13 +30,16 @@ flex: 1;
 .logo {
     height: 80%;
     margin: 0;
+    margin-left: 2rem;
 }
 
 .noodlesImg {
     height: 10rem;
+    width: 10rem;
     border-radius: 100%;
-    background-color: rgb(13, 117, 209);
+    background-color: var(--bg_whitesmoke);
     margin-top: 7rem;
+    object-fit: cover;
 }
 
 .containerRestaurantImg {
@@ -41,4 +50,34 @@ flex: 1;
     background-position: center;
     display: flex;
     justify-content: center;
+}
+
+.restoranteName,
+.categories{
+    margin: 0 2rem;
+}
+
+.restoranteName p{
+    font-size: 20px;
+    margin: 0;
+}
+
+.restoranteName h1{
+    font-size: 32px;
+}
+
+.restoranteName p {
+    color: var(--bg_orang);
+}
+
+.categories img {
+    width: 60px;
+}
+
+.arrow a{
+font-size: 20px;
+font-weight: bold;
+color: var(--bg_grey);
+text-decoration: none;
+margin-left: 10px;
 }
