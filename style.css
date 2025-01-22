@@ -156,32 +156,37 @@ h3 {
 }
 
 .content-wrapper {
-    width: 100%;    /*bei Kevin: keine Breite + flex-grow: 1; */
+    width: 100%;
+    /*bei Kevin: keine Breite + flex-grow: 1; */
     display: flex;
     gap: 2px;
     flex-direction: row;
 }
 
 .basketWrapper {
-                                  /* bei Kevin width: 300px + flex-grow: 1; */
+    /* bei Kevin width: 300px + flex-grow: 1; */
     border: 2px solid var(--bg_orang);
     border-bottom: none;
     padding: 16px;
 }
 
 .basket {
-    width: 320px; /* bei Kevin 100% */
+    width: 320px;
+    /* bei Kevin 100% */
     height: 500px;
     background-color: var(--bg_milck);
     border: 2px solid var(--bg_orang);
-    position: sticky;  /* geklebte Position */
+    position: sticky;
+    /* geklebte Position */
     top: 0;
+    padding: 16px;
 }
 
-
-.portionInformation {
+.portionInformation,
+.insertedDishes {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .headingBasket {
@@ -191,15 +196,16 @@ h3 {
 
 .buttonMinus img,
 .buttonPlus img {
-    width: 30px; 
+    width: 30px;
     height: 30px;
     border: none;
+    cursor: pointer;
 }
 
 #quantity {
     height: 32px;
     border: none;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 0 10px;
     margin: 0 10px;
 }
@@ -213,4 +219,16 @@ h3 {
 .buttonMinus,
 .buttonPlus {
     border: none;
+    cursor: pointer;
+}
+
+.priceOfTheDish {
+    color: var(--bg_orang);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.deleteSelectedDish {
+    width: 32px;
+    cursor: pointer;
 }
