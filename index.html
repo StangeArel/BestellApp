@@ -82,6 +82,7 @@
             <section class="basketWrapper">
                 <div class="basket">
                     <h3 class="headingBasket">Warenkorb</h3>
+                    
                     <div class="selectedDishes">
                         <h2 class="mySelectedDishes">Pizza Kraben</h2>
                         <div class="insertedDishes">
@@ -100,6 +101,26 @@
                                 alt="imd. Delete your selected dish">
                         </div>
                     </div>
+
+                    <div class="selectedDishes">
+                        <h2 class="mySelectedDishes">Pizza Kraben</h2>
+                        <div class="insertedDishes">
+                            <form class="portionInformation" onsubmit="calculatePortions(event)">
+                                <button type="submit" class="buttonMinus">
+                                    <img src="./assets/img/minus.png" alt="Portionen-Icon">
+                                </button>
+                                <input id="quantity" type="number" min="1" max="15" step="1" name="quantity" required
+                                    value="1">
+                                <button type="submit" class="buttonPlus">
+                                    <img src="./assets/img/plus.png" alt="Portionen-Icon">
+                                </button>
+                            </form>
+                            <div class="priceOfTheDish">9,50€</div>
+                            <img class="deleteSelectedDish" src="./assets/img/trash.png"
+                                alt="imd. Delete your selected dish">
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>
