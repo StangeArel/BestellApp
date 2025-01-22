@@ -165,13 +165,52 @@ h3 {
 .basketWrapper {
                                   /* bei Kevin width: 300px + flex-grow: 1; */
     border: 2px solid var(--bg_orang);
+    border-bottom: none;
     padding: 16px;
 }
 
 .basket {
     width: 320px; /* bei Kevin 100% */
-    height: 400px;
-    background-color: rgb(5, 91, 94);
+    height: 500px;
+    background-color: var(--bg_milck);
+    border: 2px solid var(--bg_orang);
     position: sticky;  /* geklebte Position */
     top: 0;
+}
+
+
+.portionInformation {
+    display: flex;
+    align-items: center;
+}
+
+.headingBasket {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.buttonMinus img,
+.buttonPlus img {
+    width: 30px; 
+    height: 30px;
+    border: none;
+}
+
+#quantity {
+    height: 32px;
+    border: none;
+    border-radius:5px;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+#quantity:focus {
+    border: 2px solid var(--bg_orang);
+    outline: none;
+    box-shadow: 0 0 5px var(--bg_darkorange);
+}
+
+.buttonMinus,
+.buttonPlus {
+    border: none;
 }

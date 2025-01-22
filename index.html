@@ -80,7 +80,22 @@
 
 
             <section class="basketWrapper">
-                <div class="basket"></div>
+                <div class="basket">
+                    <h3 class="headingBasket">Warenkorb</h3>
+                    <div class="selectedDishes">
+                        <h2 class="mySelectedDishes">Pizza Kraben</h2>
+                        <form class="portionInformation" onsubmit="calculatePortions(event)">
+                            <button type="submit" class="buttonMinus">
+                                <img src="./assets/img/minus.png" alt="Portionen-Icon">
+                            </button>
+                            <input id="quantity" type="number" min="1" max="15" step="1" name="quantity" required
+                                value="1">
+                            <button type="submit" class="buttonPlus">
+                                <img src="./assets/img/plus.png" alt="Portionen-Icon">
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </div>
         <section class="footer"><img class="logo" src="./assets/Logo/Logo.png" alt=""></section>
