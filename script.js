@@ -52,18 +52,7 @@ let dishes = [
     }
 ];
 
-let basket = [
-    {
-        name: "Pad Thai",
-        amount: 16,
-        price: 12.95
-    },
-    {
-        name: "Steakhouse Ribeye",
-        amount: 7,
-        price: 18.95
-    }
-];
+let basket = [];
 
 
 function init() {
@@ -80,7 +69,7 @@ function renderDishes() {
                         <div class="dish">
                             <div class="dishHeader">
                                 <h2>${dish.name}</h2>
-                                <button onclick="addToBasket(indexDishes)" class="dishHeaderBtn">
+                                <button onclick="addToBasket(${i})" class="dishHeaderBtn">
                                     <img class="imgPlus" src="./assets/img/plus.png" alt="img. Button Plus">
                                 </button>
                             </div>
@@ -118,11 +107,11 @@ function renderBasket() {
                                     </button>
                                 </form>
                                 <div class="priceOfTheDish">${basketDish.price.toLocaleString(undefined, {
-                                                                        minimumFractionDigits: 2,
-                                                                        maximumFractionDigits: 2,
-                                                                        style: "currency",
-                                                                        currency: "EUR"
-                                                                    })}</div>
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+            style: "currency",
+            currency: "EUR"
+        })}</div>
                                 <img class="deleteSelectedDish" src="./assets/img/trash.png"
                                     alt="imd. Delete your selected dish">
                             </div>
@@ -133,4 +122,11 @@ function renderBasket() {
 }
 
 function addToBasket(indexDishes) {
-}
+    let oneDish = dishes[indexDishes];
+    basket.push({
+        name: oneDish.name,
+        amount: 1,
+        price: oneDish.price
+    });
+    renderBasket();
+} 
