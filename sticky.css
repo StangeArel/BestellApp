@@ -1,0 +1,51 @@
+:root {
+    --prime_blue: rgb(70, 191, 239);
+    --bg_orang: rgb(255, 139, 0);
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    color: antiquewhite;
+}
+
+.content {
+    /* width: calc (100% - 308px) */
+    padding: 16px;
+    border: 2px solid var(--prime_blue);
+}
+
+.test_content {
+    padding: 32px;
+    font-size: 48px;
+    height: 1500px;
+    width: 100%;
+    background-color: rgb(5, 91, 94);
+}
+
+.basket_wrapper {
+    /* bei Kevin width: 300px + flex-grow: 1; */
+    border: 2px solid var(--bg_orang);
+    padding: 16px;
+}
+
+.content-wrapper {
+    width: 100%;
+    /*bei Kevin: keine Breite + flex-grow: 1; */
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    flex-direction: row;
+    background-color: black;
+}
+
+.basket {
+    width: 300px;
+    /* bei Kevin 100% */
+    height: 400px;
+    background-color: rgb(5, 91, 94);
+    position: sticky;
+    /* geklebte Position */
+    top: 0;
+}
