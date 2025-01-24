@@ -112,8 +112,8 @@ function renderBasket() {
             style: "currency",
             currency: "EUR"
         })}</div>
-                                <img class="deleteSelectedDish" src="./assets/img/trash.png"
-                                    alt="imd. Delete your selected dish">
+                                <button onclick="deleteSelectedDish(${i})"><img class="deleteSelectedDish" src="./assets/img/trash.png"
+                                    alt="imd. Delete your selected dish"></button>
                             </div>
                         </div>
         `
@@ -130,3 +130,8 @@ function addToBasket(indexDishes) {
     });
     renderBasket();
 } 
+
+function deleteSelectedDish(indexDishes) {
+    basket.splice(indexDishes, 1);
+    renderBasket();
+}

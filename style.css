@@ -177,7 +177,7 @@ h3 {
 .basket {
     width: 320px;
     /* bei Kevin 100% */
-    height: 500px;
+    min-height: 300px;
     background-color: var(--bg_milck);
     border: 2px solid var(--bg_orang);
     position: sticky;
