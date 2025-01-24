@@ -9,8 +9,9 @@
     <title>BestellApp Liferando</title>
 </head>
 
-<body class="visibleScrollbar" onload="init()">    <section class="contentContainer">
-    <section class="header"><img class="logo" src="./assets/Logo/Logo.png" alt=""></section>
+<body class="visibleScrollbar" onload="init()">
+    <section class="contentContainer">
+        <section class="header"><img class="logo" src="./assets/Logo/Logo.png" alt=""></section>
         <div class="content-wrapper">
             <section class="main">
                 <div class="restaurantHeader">
@@ -32,22 +33,9 @@
                     <img class="dishImg" src="./assets/img/dish.jpg" alt="img. main course">
                     <h3>Hauptgerichte</h3>
 
-
                     <div class="dishes" id="dishes">
-                        <div class="dish">
-                            <div class="dishHeader">
-                                <h2>Pizza Kraben</h2>
-                                <a class="dishHeaderBtn">
-                                    <img class="imgPlus" src="./assets/img/plus.png" alt="img. Button Plus">
-                                </a>
-                            </div>
-                            <p id="ingredients">mit Krabben und Peperoni</p>
-                            <p id="price">9,50€</p>
-                        </div>
                     </div>
 
-
-                    
                 </div>
             </section>
 
@@ -56,43 +44,13 @@
                 <div class="basket">
                     <h3 class="headingBasket">Warenkorb</h3>
 
-                    <div class="selectedDishes">
-                        <h2 class="mySelectedDishes">Pizza Kraben</h2>
-                        <div class="insertedDishes">
-                            <form class="portionInformation" onsubmit="calculatePortions(event)">
-                                <button type="submit" class="buttonMinus">
-                                    <img src="./assets/img/minus.png" alt="Portionen-Icon">
-                                </button>
-                                <input id="quantity" type="number" min="1" max="15" step="1" name="quantity" required
-                                    value="1">
-                                <button type="submit" class="buttonPlus">
-                                    <img src="./assets/img/plus.png" alt="Portionen-Icon">
-                                </button>
-                            </form>
-                            <div class="priceOfTheDish">9,50€</div>
-                            <img class="deleteSelectedDish" src="./assets/img/trash.png"
-                                alt="imd. Delete your selected dish">
-                        </div>
-                    </div>
 
-                    <div class="selectedDishes">
-                        <h2 class="mySelectedDishes">Pizza Kraben</h2>
-                        <div class="insertedDishes">
-                            <form class="portionInformation" onsubmit="calculatePortions(event)">
-                                <button type="submit" class="buttonMinus">
-                                    <img src="./assets/img/minus.png" alt="Portionen-Icon">
-                                </button>
-                                <input id="quantity" type="number" min="1" max="15" step="1" name="quantity" required
-                                    value="1">
-                                <button type="submit" class="buttonPlus">
-                                    <img src="./assets/img/plus.png" alt="Portionen-Icon">
-                                </button>
-                            </form>
-                            <div class="priceOfTheDish">9,50€</div>
-                            <img class="deleteSelectedDish" src="./assets/img/trash.png"
-                                alt="imd. Delete your selected dish">
-                        </div>
-                    </div>
+
+                    <div id="basketSelectedDishes"></div>
+
+
+
+
                 </div>
             </section>
         </div>

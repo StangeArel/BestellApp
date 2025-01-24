@@ -107,11 +107,11 @@ h3 {
     margin: 0 2rem;
 }
 
-.cuisine {
+.dish {
     background-color: var(--bg_milck);
 }
 
-.cuisineHeader {
+.dishHeader {
     display: flex;
     justify-content: space-between;
     align-content: space-around;
@@ -121,6 +121,10 @@ h3 {
     width: 50px;
     border-radius: 100%;
     cursor: pointer;
+}
+
+.dishHeaderBtn {
+    border: none;
 }
 
 #ingredients {
@@ -183,7 +187,7 @@ h3 {
 }
 
 .portionInformation,
-.insertedDishes {
+.insertedDish {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -209,6 +213,8 @@ h3 {
     padding: 0 10px;
     margin: 0 10px;
     text-align: center;
+    display: flex;
+    align-items: flex-start;
 }
 
 #quantity:focus {
