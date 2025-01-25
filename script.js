@@ -92,33 +92,37 @@ function renderBasket() {
 
     for (let i = 0; i < basket.length; i++) {
         let basketDish = basket[i];
-        let template = /*HTML*/ `
-                        <div class="selectedDish">
-                            <h2 class="mySelectedDish">${basketDish.name}</h2>
-                            <div class="insertedDish">
-                                <form class="portionInformation" onsubmit="calculatePortions(event)">
-                                    <button type="submit" class="buttonMinus">
-                                        <img src="./assets/img/minus.png" alt="Portionen-Icon">
-                                    </button>
-                                    <input id="quantity" type="number" min="1" max="15" step="1" name="quantity"
-                                        required value="${basketDish.amount}">
-                                    <button type="submit" class="buttonPlus">
-                                        <img src="./assets/img/plus.png" alt="Portionen-Icon">
-                                    </button>
-                                </form>
-                                <div class="priceOfTheDish">${basketDish.price.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-            style: "currency",
-            currency: "EUR"
-        })}</div>
-                                <button onclick="deleteSelectedDish(${i})"><img class="deleteSelectedDish" src="./assets/img/trash.png"
-                                    alt="imd. Delete your selected dish"></button>
-                            </div>
-                        </div>
-        `
+        let template = generateTemplatesForRenderBasket(basketDish, i);
         basketRef.innerHTML += template;
     }
+}
+
+function generateTemplatesForRenderBasket(basketDish, i) {
+    return  `
+    <div class="selectedDish">
+        <h2 class="mySelectedDish">${basketDish.name}</h2>
+        <div class="insertedDish">
+            <form class="portionInformation" onsubmit="calculatePortions(event)">
+                <button type="submit" class="buttonMinus">
+                    <img src="./assets/img/minus.png" alt="Portionen-Icon">
+                </button>
+                <input id="quantity" type="number" min="1" max="15" step="1" name="quantity"
+                    required value="${basketDish.amount}">
+                <button type="submit" class="buttonPlus">
+                    <img src="./assets/img/plus.png" alt="Portionen-Icon">
+                </button>
+            </form>
+            <div class="priceOfTheDish">${basketDish.price.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+                style: "currency",
+                currency: "EUR"
+            })}</div>
+            <button id="btnBasket" onclick="deleteSelectedDish(${i})"><img class="deleteSelectedDish" src="./assets/img/trash.png"
+                alt="imd. Delete your selected dish"></button>
+        </div>
+    </div>
+`
 }
 
 function addToBasket(indexDishes) {
@@ -129,7 +133,7 @@ function addToBasket(indexDishes) {
         price: oneDish.price
     });
     renderBasket();
-} 
+}
 
 function deleteSelectedDish(indexDishes) {
     basket.splice(indexDishes, 1);
