@@ -83,12 +83,25 @@ function renderBasket() {
 
 function addToBasket(indexDishes) {
     let oneDish = dishes[indexDishes];
-    basket.push({
-        name: oneDish.name,
-        amount: 1,
-        price: oneDish.price
-    });
+    if (getBasketIndex(oneDish) === -1) {
+        basket.push({
+            name: oneDish.name,
+            amount: 1,
+            price: oneDish.price
+        });
+    } else {
+        basket[getBasketIndex(oneDish)].amount += 1;
+    }
     renderBasket();
+}
+
+function getBasketIndex(dish) {
+    for (let i = 0; i < basket.length; i++) {
+        if (basket[i].name == dish.name) {
+            return i;
+        }
+    } 
+    return -1;
 }
 
 function increaseAmount() {
