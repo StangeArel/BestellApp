@@ -105,7 +105,6 @@ function getBasketIndex(dish) {
 }
 
 function increaseAmount() {
-
 }
 
 function reduceAmount() {
