@@ -1,4 +1,3 @@
-// Daten anlegen
 let dishes = [
     {
         name: "Pizza Krabben",
@@ -47,13 +46,12 @@ let dishes = [
     },
     {
         name: "Pad Thai",
-        description: "Thailändische Reisnudeln mit Garnelen, Erdnüssen und Tamarindensoße.",
+        description: "Thailändische Reisnudeln mit Garnelen, Erdnüssen und Tamarindensauce.",
         price: 12.95
     }
 ];
 
 let basket = [];
-
 
 function init() {
     renderDishes();
@@ -100,7 +98,7 @@ function getBasketIndex(dish) {
         if (basket[i].name == dish.name) {
             return i;
         }
-    } 
+    }
     return -1;
 }
 
@@ -108,10 +106,21 @@ function increaseAmount() {
 }
 
 function reduceAmount() {
-
 }
 
 function deleteSelectedDish(indexDishes) {
     basket.splice(indexDishes, 1);
     renderBasket();
+}
+
+function toggleOverlay() {
+    let overlayRef = document.getElementById('basketWrapper');
+    overlayRef.classList.toggle('showBasketOverlay');
+    overlayRef.classList.toggle('basketWrapper');
+
+    let mainRef = document.getElementById('main');
+    mainRef.classList.toggle('displayNone');
+
+    let basketRef = document.getElementById('basket');
+    basketRef.classList.toggle('basketWidth');
 }

@@ -3,7 +3,7 @@
     --bg_darkorange: rgb(159, 89, 3);
     --bg_whitesmoke: rgb(255, 255, 255);
     --bg_grey: rgb(132, 135, 135);
-    --bg_milck: rgb(247, 239, 229);
+    --bg_milck: rgb(229, 211, 188);
 }
 
 html, body {
@@ -108,7 +108,7 @@ h3 {
 }
 
 .dish {
-    background-color: var(--bg_milck);
+    border: 1px dashed var(--bg_orang);
 }
 
 .dishHeader {
@@ -125,6 +125,16 @@ h3 {
 
 .dishHeaderBtn,
 #btnBasket {
+    border: none;
+}
+
+.basketWidth {
+    padding: 100px;
+    margin: 10px;
+    width: 90% !important;
+}
+
+.btnBasketDeleteDish {
     border: none;
 }
 
@@ -164,7 +174,6 @@ h3 {
     width: 100%;
     /*bei Kevin: keine Breite + flex-grow: 1; */
     display: flex;
-    gap: 2px;
     flex-direction: row;
 }
 
@@ -179,9 +188,8 @@ h3 {
     width: 320px;
     /* bei Kevin 100% */
     min-height: 300px;
-    background-color: var(--bg_milck);
-    border: 2px solid var(--bg_orang);
-    position: sticky;
+    border: 2px dashed var(--bg_orang);
+    position: relative;
     /* geklebte Position */
     top: 0;
     padding: 16px;
@@ -207,21 +215,12 @@ h3 {
     cursor: pointer;
 }
 
-#quantity {
+.quantity {
     height: 32px;
-    border: none;
-    border-radius: 5px;
     padding: 0 10px;
     margin: 0 10px;
-    text-align: center;
     display: flex;
-    align-items: flex-start;
-}
-
-#quantity:focus {
-    border: 2px solid var(--bg_orang);
-    outline: none;
-    box-shadow: 0 0 5px var(--bg_darkorange);
+    align-items: center;
 }
 
 .buttonMinus,
@@ -241,8 +240,68 @@ h3 {
     cursor: pointer;
 }
 
-#quantity::-webkit-inner-spin-button,
-#quantity::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+#btnBasket {
+    background-color: var(--bg_darkorange);
+    cursor: pointer;
+    width: 100%;
+    height: 100px;
+    color: var(--bg_milck);
+    border: 1px solid var(--bg_orang);
+    font-size: 2.2rem;
+    position: sticky;
+    bottom: 0;
+    cursor: pointer;
+}
+
+#btnBasket:hover {
+    background-color: var(--bg_orang);
+    border: 1px solid var(--bg_darkorange);
+}
+
+.showBasketOverlay {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg_milck);
+}
+
+#closeBasketBtn {
+    width: 50px;
+    border: none;
     margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#closeBasketBtn img {
+    width: 100%;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.displayNone {
+    display: none;
+}
+
+@media (max-width: 1070px) {
+    .basketWrapper {
+        display: none;
+    }
+}
+
+@media (min-width: 1070px) {
+    #btnBasket {
+        display: none;
+    }
 }

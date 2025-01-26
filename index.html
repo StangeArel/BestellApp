@@ -13,7 +13,7 @@
     <section class="contentContainer">
         <section class="header"><img class="logo" src="./assets/Logo/Logo.png" alt=""></section>
         <div class="content-wrapper">
-            <section class="main">
+            <section class="main" id="main">
                 <div class="restaurantHeader">
                     <div class="containerRestaurantImg"><img class="noodlesImg" src="./assets/img/nooglebox.png"
                             alt="img. Noodles"></div>
@@ -32,30 +32,23 @@
                 <div class="mainCourses">
                     <img class="dishImg" src="./assets/img/dish.jpg" alt="img. main course">
                     <h3>Hauptgerichte</h3>
-
                     <div class="dishes" id="dishes">
                     </div>
-
                 </div>
+                <button onclick="toggleOverlay()" id="btnBasket">Schaue dein Warenkorb</button>
             </section>
-
-
-            <section class="basketWrapper">
-                <div class="basket">
+            <section class="basketWrapper" id="basketWrapper">
+                <div class="basket" id="basket">
+                    <button id="closeBasketBtn" onclick="toggleOverlay()"><img src="./assets/img/plus.png"
+                            alt="img. Close Basket"></button>
                     <h3 class="headingBasket">Warenkorb</h3>
-
-
-
                     <div id="basketSelectedDishes"></div>
-
-
-
-
                 </div>
             </section>
         </div>
         <section class="footer"><img class="logo" src="./assets/Logo/Logo.png" alt=""></section>
     </section>
+
 </body>
 <script src="./script.js"></script>
 <script src="./templates.js"></script>
