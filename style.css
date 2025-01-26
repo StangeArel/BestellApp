@@ -126,6 +126,7 @@ h3 {
 .dishHeaderBtn,
 #btnBasket {
     border: none;
+    background-color: transparent;
 }
 
 .basketWidth {
@@ -136,6 +137,7 @@ h3 {
 
 .btnBasketDeleteDish {
     border: none;
+    background-color: transparent;
 }
 
 #ingredients {
@@ -227,6 +229,7 @@ h3 {
 .buttonPlus {
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .priceOfTheDish {
