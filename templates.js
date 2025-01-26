@@ -44,3 +44,33 @@ function generateTemplatesForRenderBasket(basketDish, i) {
     </div>
 `
 }
+
+function generateTemplatesForBasketSum() {
+    return `
+            <div class="Checkout">
+                <p>Zwischensumme</p>
+                <p>Lieferkosten</p>
+                <p><b>Gesamt</b></p>
+            </div>
+            <div class="totalCheckout">
+                <p id="subTotal">${calculateSubTotal().toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                    style: "currency",
+                    currency: "EUR"
+                })}</p>
+                <p id="deliveryCosts">${deliveryCosts.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                    style: "currency",
+                    currency: "EUR"
+                })}</p>
+                <p id="total"><b>${(calculateSubTotal() + deliveryCosts).toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                    style: "currency",
+                    currency: "EUR"
+                })}</b></p>
+            </div>
+`
+}

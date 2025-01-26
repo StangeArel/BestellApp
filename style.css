@@ -264,6 +264,7 @@ h3 {
 .showBasketOverlay {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     position: absolute;
     top: 0;
     left: 0;
@@ -297,6 +298,12 @@ h3 {
     display: none;
 }
 
+.containerForEntireSum {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
 @media (max-width: 1070px) {
     .basketWrapper {
         display: none;
@@ -306,5 +313,11 @@ h3 {
 @media (min-width: 1070px) {
     #btnBasket {
         display: none;
+    }
+}
+
+@media (max-width: 775px) {
+    .restoranteName h1 {
+        margin-top: 100px;
     }
 }

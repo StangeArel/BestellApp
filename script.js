@@ -52,6 +52,7 @@ let dishes = [
 ];
 
 let basket = [];
+let deliveryCosts = 5;
 
 function init() {
     renderDishes();
@@ -77,6 +78,9 @@ function renderBasket() {
         let template = generateTemplatesForRenderBasket(basketDish, i);
         basketRef.innerHTML += template;
     }
+
+    let containerForEntireSum = document.getElementById("containerForEntireSum");
+    containerForEntireSum.innerHTML = generateTemplatesForBasketSum();
 }
 
 function addToBasket(indexDishes) {
@@ -91,9 +95,6 @@ function addToBasket(indexDishes) {
         basket[getBasketIndex(oneDish)].amount += 1;
     }
     renderBasket();
-
-
-
 }
 
 function getBasketIndex(dish) {
@@ -139,4 +140,12 @@ function toggleOverlay() {
 
     let closeButtonRef = document.getElementById('closeBasketBtn');
     closeButtonRef.classList.toggle('displayNone');
+}
+
+function calculateSubTotal() {
+    let subTotalInzwischen = 0;
+    for (let i = 0; i < basket.length; i++) {
+        subTotalInzwischen += basket[i].price * basket[i].amount;
+    }
+    return subTotalInzwischen;
 }
