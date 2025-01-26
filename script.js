@@ -87,10 +87,13 @@ function addToBasket(indexDishes) {
             amount: 1,
             price: oneDish.price
         });
-    } else {
+    } else if (basket[getBasketIndex(oneDish)].amount > 0 && basket[getBasketIndex(oneDish)].amount < 15) {
         basket[getBasketIndex(oneDish)].amount += 1;
     }
     renderBasket();
+
+
+
 }
 
 function getBasketIndex(dish) {
@@ -102,10 +105,20 @@ function getBasketIndex(dish) {
     return -1;
 }
 
-function increaseAmount() {
+function increaseAmount(indexBasket) {
+    let oneDish = basket[indexBasket];
+    if (oneDish.amount < 15) {
+        oneDish.amount += 1;
+    }
+    renderBasket();
 }
 
-function reduceAmount() {
+function reduceAmount(indexBasket) {
+    let oneDish = basket[indexBasket];
+    if (oneDish.amount > 0) {
+        oneDish.amount -= 1;
+    }
+    renderBasket();
 }
 
 function deleteSelectedDish(indexDishes) {

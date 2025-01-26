@@ -24,11 +24,11 @@ function generateTemplatesForRenderBasket(basketDish, i) {
         <h2 class="mySelectedDish">${basketDish.name}</h2>
         <div class="insertedDish">
             <div class="portionInformation">
-                <button type="submit" class="buttonMinus">
+                <button type="submit" class="buttonMinus" onclick="reduceAmount(${i})">
                     <img src="./assets/img/minus.png" alt="Portionen-Icon">
                 </button>
                     <div class="quantity">${basketDish.amount}</div>
-                <button type="submit" class="buttonPlus">
+                <button type="submit" class="buttonPlus" onclick="increaseAmount(${i})">
                     <img src="./assets/img/plus.png" alt="Portionen-Icon">
                 </button>
             </div>
