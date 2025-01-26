@@ -136,4 +136,7 @@ function toggleOverlay() {
 
     let basketRef = document.getElementById('basket');
     basketRef.classList.toggle('basketWidth');
+
+    let closeButtonRef = document.getElementById('closeBasketBtn');
+    closeButtonRef.classList.toggle('displayNone');
 }
