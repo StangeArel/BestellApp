@@ -1,22 +1,3 @@
-:root {
-    --bg_orang: rgb(255, 139, 0);
-    --bg_darkorange: rgb(159, 89, 3);
-    --bg_whitesmoke: rgb(255, 255, 255);
-    --bg_grey: rgb(132, 135, 135);
-    --bg_milck: rgb(229, 211, 188);
-    --bg_dark_yellow: rgb(191, 171, 92);
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-h3 {
-    font-size: 2rem;
-    margin: 0;
-}
-
 .contentContainer {
     min-height: 100vh;
     display: flex;
@@ -110,6 +91,10 @@ h3 {
 
 .dish {
     border: 1px dashed var(--bg_orang);
+}
+
+.dish:hover {
+background-color: var(--bg_melone);
 }
 
 .dishHeader {
