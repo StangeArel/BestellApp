@@ -21,18 +21,18 @@ function renderBasket() {
         let template = generateTemplatesForRenderBasket(basketDish, i);
         basketRef.innerHTML += template;
     }
-    if (emptyBasketLetMeKnow()) {
-        return;
-    }
+    emptyBasketLetMeKnow()
 }
 
 function emptyBasketLetMeKnow() {
+    let containerForEntireSum = document.getElementById("containerForEntireSum");
+
     if (basket.length === 0) {
         let basketEmptyText = document.getElementById(`basketSelectedDishes`);
         basketEmptyText.innerHTML = generateTemplateEmptyBasket();
+        containerForEntireSum.innerHTML = "";
         return;
     }
-    let containerForEntireSum = document.getElementById("containerForEntireSum");
     containerForEntireSum.innerHTML = generateTemplatesForBasketSum();
 }
 
