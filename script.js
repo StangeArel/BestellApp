@@ -79,6 +79,18 @@ function renderBasket() {
         basketRef.innerHTML += template;
     }
 
+    if (emptyBasketLetMeKnow()) {
+        return;
+    }
+}
+
+function emptyBasketLetMeKnow() {
+    if (basket.length === 0) {
+        let basketEmptyText = document.getElementById(`basketSelectedDishes`);
+        basketEmptyText.innerHTML = generateTemplateEmptyBasket();
+        return;
+    }
+
     let containerForEntireSum = document.getElementById("containerForEntireSum");
     containerForEntireSum.innerHTML = generateTemplatesForBasketSum();
 }
@@ -116,8 +128,10 @@ function increaseAmount(indexBasket) {
 
 function reduceAmount(indexBasket) {
     let oneDish = basket[indexBasket];
-    if (oneDish.amount > 0) {
+    if (oneDish.amount > 1) {
         oneDish.amount -= 1;
+    } else {
+        basket.splice(indexBasket, 1);
     }
     renderBasket();
 }

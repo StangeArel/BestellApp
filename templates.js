@@ -78,3 +78,10 @@ function generateTemplatesForBasketSum() {
             </div>
 `
 }
+
+function generateTemplateEmptyBasket() {
+    return `
+            <p class="emptyBasket">Noch nichts im Warenkorb?</p>
+            <p class="emptyBasket">Entdecke jetzt unsere Leckereien!</p>
+    `
+}
