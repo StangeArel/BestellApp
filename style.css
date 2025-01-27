@@ -328,6 +328,22 @@ background-color: var(--bg_melone);
     font-size: 20px;
 }
 
+#orderBnt {
+    background-color: var(--bg_orang);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: 'DynaPuff', sans-serif;
+    width: 100%;
+    height: 50px;
+    color: var(--bg_whitesmoke);
+}
+
+#orderBnt:hover {
+    background-color: var(--bg_darkorange);
+}
+
 @media (max-width: 1070px) {
     .basketWrapper {
         display: none;
