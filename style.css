@@ -213,11 +213,6 @@ background-color: var(--bg_melone);
     border-radius: 100%;
 }
 
-.deleteSelectedDish:hover {
-    background-color: var(--bg_dark_yellow);
-    border-radius: 20%;
-}
-
 .quantity {
     height: 32px;
     padding: 0 10px;
@@ -242,6 +237,11 @@ background-color: var(--bg_melone);
 .deleteSelectedDish {
     width: 32px;
     cursor: pointer;
+}
+
+.deleteSelectedDish:hover {
+    border-radius: 20%;
+    filter: drop-shadow(0 0 12px var(--bg_orang));
 }
 
 #btnBasket {
