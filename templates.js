@@ -9,11 +9,13 @@ function generateTemplatesForRenderDishes(dish, i) {
                             </div>
                             <p id="ingredients">${dish.description}</p>
                             <p id="price">${dish.price.toLocaleString(undefined, { //toLocaleString-Funktion ist großartig
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-        style: "currency",
-        currency: "EUR"
-    })}</p>
+                                                    minimumFractionDigits: 2,
+                                                    maximumFractionDigits: 2,
+                                                    style: "currency",
+                                                    currency: "EUR"
+                                                })
+                                            }
+                            </p>
                         </div>
     `
 }
@@ -33,11 +35,13 @@ function generateTemplatesForRenderBasket(basketDish, i) {
                 </button>
             </div>
             <div class="priceOfTheDish">${(basketDish.amount * basketDish.price).toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-        style: "currency",
-        currency: "EUR"
-    })}</div>
+                                                minimumFractionDigits: 2,
+                                                maximumFractionDigits: 2,
+                                                style: "currency",
+                                                currency: "EUR"
+                                            })
+                                        }
+            </div>
             <button class="btnBasketDeleteDish" onclick="deleteSelectedDish(${i})"><img class="deleteSelectedDish" src="./assets/img/trash.png"
                 alt="imd. Delete your selected dish"></button>
         </div>
