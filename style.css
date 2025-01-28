@@ -357,7 +357,7 @@
     display: none;
     height: 5%;
     background-color: var(--bg_dark_yellow);
-    color: white;
+    color: var(--bg_white);
     text-align: center;
     border-radius: 8px;
     padding: 25px;
@@ -386,4 +386,3 @@
         margin-top: 100px;
     }
 }
-

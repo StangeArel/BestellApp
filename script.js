@@ -34,7 +34,6 @@ function renderBasket() {
 function emptyBasketLetMeKnow() {
     let containerForEntireSum = document.getElementById("containerForEntireSum");
     let containerForOrderBtn = document.getElementById("containerForOrderBtn");
-
     if (basket.length === 0) {
         let basketEmptyText = document.getElementById(`basketSelectedDishes`);
         basketEmptyText.innerHTML = generateTemplateEmptyBasket();
