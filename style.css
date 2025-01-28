@@ -6,6 +6,8 @@
 
 .main {
     flex: 1;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .footer,
@@ -52,6 +54,7 @@
 }
 
 .restoranteName h1 {
+    margin-top: 70px;
     font-size: 35px;
 }
 
@@ -90,11 +93,14 @@
 }
 
 .dish {
+    margin-top: 15px;
     border: 1px dashed var(--bg_orang);
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .dish:hover {
-background-color: var(--bg_melone);
+    background-color: var(--bg_melone);
 }
 
 .dishHeader {
@@ -173,14 +179,14 @@ background-color: var(--bg_melone);
     /* bei Kevin width: 300px + flex-grow: 1; */
     border: 2px solid var(--bg_orang);
     border-bottom: none;
+    border-top: none;
     padding: 16px;
 }
 
 .basket {
-    width: 320px;
+    width: 350px;
     /* bei Kevin 100% */
     min-height: 300px;
-    border: 2px dashed var(--bg_orang);
     position: relative;
     /* geklebte Position */
     top: 0;
@@ -207,6 +213,7 @@ background-color: var(--bg_melone);
     border: none;
     cursor: pointer;
 }
+
 .buttonMinus img:hover,
 .buttonPlus img:hover {
     background-color: var(--bg_dark_yellow);
@@ -251,7 +258,7 @@ background-color: var(--bg_melone);
     height: 100px;
     color: var(--bg_milck);
     border: 1px solid var(--bg_orang);
-    font-size: 2.2rem;
+    font-size: 2rem;
     position: sticky;
     bottom: 0;
     cursor: pointer;
@@ -328,20 +335,38 @@ background-color: var(--bg_melone);
     font-size: 20px;
 }
 
-#orderBnt {
+#orderBtn {
     background-color: var(--bg_orang);
     cursor: pointer;
     border: none;
+    text-align: center;
     border-radius: 10px;
     font-size: 1.5rem;
     font-family: 'DynaPuff', sans-serif;
     width: 100%;
     height: 50px;
     color: var(--bg_whitesmoke);
+    position: relative;
 }
 
-#orderBnt:hover {
+#orderBtn:hover {
     background-color: var(--bg_darkorange);
+}
+
+.popupText {
+    display: none;
+    height: 5%;
+    background-color: var(--bg_dark_yellow);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 25px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.popupText.show {
+    display: block;
 }
 
 @media (max-width: 1070px) {
@@ -361,3 +386,4 @@ background-color: var(--bg_melone);
         margin-top: 100px;
     }
 }
+

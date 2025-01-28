@@ -21,19 +21,29 @@ function renderBasket() {
         let template = generateTemplatesForRenderBasket(basketDish, i);
         basketRef.innerHTML += template;
     }
-    emptyBasketLetMeKnow()
+    emptyBasketLetMeKnow();
+    let counterRef = document.getElementById('btnBasketCount');
+    counterRef.innerHTML = "(" + calculateSubTotal().toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        style: "currency",
+        currency: "EUR"
+    }) + " zzgl. Lieferkosten)";
 }
 
 function emptyBasketLetMeKnow() {
     let containerForEntireSum = document.getElementById("containerForEntireSum");
+    let containerForOrderBtn = document.getElementById("containerForOrderBtn");
 
     if (basket.length === 0) {
         let basketEmptyText = document.getElementById(`basketSelectedDishes`);
         basketEmptyText.innerHTML = generateTemplateEmptyBasket();
+        containerForOrderBtn.innerHTML = "";
         containerForEntireSum.innerHTML = "";
         return;
     }
     containerForEntireSum.innerHTML = generateTemplatesForBasketSum();
+    containerForOrderBtn.innerHTML = generateTemplatesForOrderBtn();
 }
 
 function addToBasket(indexDishes) {
@@ -103,4 +113,15 @@ function calculateSubTotal() {
         subTotalInzwischen += basket[i].price * basket[i].amount;
     }
     return subTotalInzwischen;
+}
+
+function orderBtn() {
+    basket = [];
+    toggleShowClass();
+    renderBasket();
+}
+
+function toggleShowClass() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
 }

@@ -9,12 +9,12 @@ function generateTemplatesForRenderDishes(dish, i) {
                             </div>
                             <p id="ingredients">${dish.description}</p>
                             <p id="price">${dish.price.toLocaleString(undefined, { //toLocaleString-Funktion ist großartig
-                                                    minimumFractionDigits: 2,
-                                                    maximumFractionDigits: 2,
-                                                    style: "currency",
-                                                    currency: "EUR"
-                                                })
-                                            }
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        style: "currency",
+        currency: "EUR"
+    })
+        }
                             </p>
                         </div>
     `
@@ -35,12 +35,12 @@ function generateTemplatesForRenderBasket(basketDish, i) {
                 </button>
             </div>
             <div class="priceOfTheDish">${(basketDish.amount * basketDish.price).toLocaleString(undefined, {
-                                                minimumFractionDigits: 2,
-                                                maximumFractionDigits: 2,
-                                                style: "currency",
-                                                currency: "EUR"
-                                            })
-                                        }
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        style: "currency",
+        currency: "EUR"
+    })
+        }
             </div>
             <button class="btnBasketDeleteDish" onclick="deleteSelectedDish(${i})"><img class="deleteSelectedDish" src="./assets/img/trash.png"
                 alt="imd. Delete your selected dish"></button>
@@ -58,23 +58,23 @@ function generateTemplatesForBasketSum() {
             </div>
             <div class="totalCheckout">
                 <p id="subTotal">${calculateSubTotal().toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                    style: "currency",
-                    currency: "EUR"
-                })}</p>
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        style: "currency",
+        currency: "EUR"
+    })}</p>
                 <p id="deliveryCosts">${deliveryCosts.toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                    style: "currency",
-                    currency: "EUR"
-                })}</p>
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        style: "currency",
+        currency: "EUR"
+    })}</p>
                 <p id="total"><b>${(calculateSubTotal() + deliveryCosts).toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                    style: "currency",
-                    currency: "EUR"
-                })}</b></p>
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        style: "currency",
+        currency: "EUR"
+    })}</b></p>
             </div>
 `
 }
@@ -84,4 +84,10 @@ function generateTemplateEmptyBasket() {
             <p class="emptyBasket">Noch nichts im Warenkorb?</p>
             <p class="emptyBasket">Entdecke jetzt unsere Leckereien!</p>
     `
+}
+
+function generateTemplatesForOrderBtn() {
+    return `
+            <button class="orderBtn" id="orderBtn" onclick="orderBtn()">Zahlungspflichtig bestellen!</button>
+`
 }
